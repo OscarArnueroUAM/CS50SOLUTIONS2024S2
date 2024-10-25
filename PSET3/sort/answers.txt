@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: Debido a que este método, implica el compararse de dos en dos, por ende es algo dilatado.
+
+sort2 uses: Merge
+
+How do you know?: Es el más rapido, debido a que este se comprende como un método de ordenamiento, el cual compara entre varios valores para irlo ordenando, de una forma algo exponencial.
+
+sort3 uses: Selection
+
+How do you know?: Cuando un arreglo de números esta ordenado, y el problema es que tiene que recorrer todo, por ende es más tardado.
