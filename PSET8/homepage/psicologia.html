@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intereses en Psicología y Terapia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm+1HbDauKvJt7B+3Z2BgWeJELgt4aDy3IoR4m5wlslw6y6p" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        // Función para agregar un comentario
+        function agregarComentario() {
+            var nombre = document.getElementById("nombre").value;
+            var comentario = document.getElementById("comentario").value;
+
+            // Validar que los campos no estén vacíos
+            if (nombre === "" || comentario === "") {
+                alert("Por favor, completa ambos campos.");
+                return;
+            }
+
+            // Crear un nuevo elemento div para el comentario
+            var nuevoComentario = document.createElement("div");
+            nuevoComentario.classList.add("border", "p-3", "mt-3");
+
+            // Crear el contenido del comentario
+            var contenido = "<strong>" + nombre + "</strong><p>" + comentario + "</p>";
+            nuevoComentario.innerHTML = contenido;
+
+            // Agregar el comentario a la sección de comentarios
+            document.getElementById("comentarios").appendChild(nuevoComentario);
+
+            // Limpiar los campos del formulario
+            document.getElementById("nombre").value = "";
+            document.getElementById("comentario").value = "";
+        }
+    </script>
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <div class="container">
+            <h1>Psicología y Ayuda a los Demás</h1>
+            <p>Mi pasión por ayudar a las personas a través de la psicología y la terapia</p>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <!-- Sección de introducción a la psicología -->
+        <section class="row">
+            <div class="col-md-12">
+                <h2>Mi Interés en la Psicología</h2>
+                <p>Desde hace algún tiempo, he desarrollado un gran interés por la psicología, la terapia, y cómo podemos utilizar estas disciplinas para ayudar a las personas a superar sus problemas y desafíos. Mi objetivo es hacer que las personas se sientan comprendidas y apoyadas en momentos difíciles.</p>
+                <p>Mi enfoque es ayudar a quienes están pasando por problemas emocionales, estrés, ansiedad, y depresión, proporcionando una escucha activa y apoyo emocional.</p>
+                <!-- Espacio para una imagen relacionada con psicología -->
+                <img src="ruta_de_imagen_psicologia" alt="Imagen relacionada con la psicología" class="img-fluid my-3">
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Sección de áreas de interés en la psicología -->
+        <section class="row mt-4">
+            <div class="col-md-6">
+                <h2>Áreas de Interés</h2>
+                <ul>
+                    <li>Psicología positiva</li>
+                    <li>Manejo del estrés y la ansiedad</li>
+                    <li>Apoyo en procesos de duelo</li>
+                    <li>Escucha activa y terapia emocional</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Cómo Ayudo a los Demás</h2>
+                <p>Creo que cada persona tiene el potencial de superar cualquier obstáculo, y a través de la terapia y el apoyo adecuado, es posible encontrar nuevas formas de pensar y vivir de manera más plena. Ayudo a las personas a descubrir su propia fortaleza y a desarrollar herramientas para gestionar mejor sus emociones.</p>
+                <p>Mi objetivo es proporcionar un espacio seguro donde las personas se sientan cómodas para compartir sus preocupaciones y donde podamos trabajar juntos para mejorar su bienestar.</p>
+                <!-- Espacio para una imagen relacionada con terapia -->
+                <img src="ruta_de_imagen_terapia" alt="Imagen relacionada con terapia" class="img-fluid my-3">
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Sección de comentarios -->
+        <section class="row mt-4">
+            <div class="col-md-12">
+                <h2>Deja tu Comentario</h2>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Escribe tu nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="comentario" class="form-label">Comentario:</label>
+                    <textarea id="comentario" class="form-control" rows="4" placeholder="Escribe tu comentario"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="agregarComentario()">Enviar Comentario</button>
+
+                <!-- Contenedor para mostrar los comentarios -->
+                <div id="comentarios" class="mt-4"></div>
+            </div>
+        </section>
+
+        <!-- Botones de navegación -->
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">Volver a la página principal</a>
+            <a href="hobbies.html" class="btn btn-secondary">Ver Mis Hobbies</a>
+            <a href="negocios.html" class="btn btn-success">Ver Mis Negocios</a>
+        </div>
+    </main>
+
+    <footer class="text-center bg-dark text-white p-3 mt-4">
+        <p>© 2024 Oscar Enrrique Arnueiro Ramos - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFY1zC2LA8Nl+tuvF0sA/6k6jhhQe0RH8eV4XaK26Nuj25Y6thABPlkc9" crossorigin="anonymous"></script>
+</body>
+</html>
