@@ -1,0 +1,23 @@
+1.sql escribe una consulta SQL que liste los nombres de todas las canciones en la base de datos.
+SELECT name FROM songs;
+
+2.sql escribe una consulta SQL que liste los nombres de todas las canciones en orden creciente de tempo.
+SELECT name FROM songs ORDER BY tempo;
+
+3.sql escribe una consulta que liste los nombres de las cinco canciones más largas, en orden descendente de longitud.
+SELECT name FROM songs ORDER BY duration_ms DESC LIMIT 5;
+
+4.sql escribe una consulta SQL que liste los nombres de cualquier canción que tenga un valor mayor a 0.75 en bailabilidad, energía y valencia.
+SELECT name FROM songs WHERE danceability > 0.75 AND energy > 0.75 AND valence > 0.75;
+
+5.sql escribe una consulta SQL que retorne el promedio de energía de todas las canciones.
+SELECT AVG(energy) FROM songs;
+
+6.sql escribe una consulta SQL que liste los nombres de las canciones de Post Malone.
+SELECT name FROM songs WHERE artist_id = (SELECT id FROM artists WHERE name = 'Post Malone');
+
+7.sql escribe una consulta SQL que retorne el promedio de energía de las canciones de Drake.
+SELECT AVG(energy) FROM songs WHERE artist_id = (SELECT id FROM artists WHERE name = 'Drake');
+
+8.sql escribe una consulta SQL que liste los nombres de las canciones que incluyen un artista invitado.
+SELECT name FROM songs WHERE name LIKE '%feat.%';
